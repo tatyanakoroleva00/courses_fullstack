@@ -431,15 +431,76 @@
 
 /***********************09_06 ARRAY FIND **********/
 
-let movies = [
-    "The Fantastic Mr. Fox",
-    "Mr. and Mrs. Smith",
-    "Mrs. Doubtfire",
-    "Mr. Deeds"
-  ];
+// let movies = [
+//     "The Fantastic Mr. Fox",
+//     "Mr. and Mrs. Smith",
+//     "Mrs. Doubtfire",
+//     "Mr. Deeds"
+//   ];
   
 // EXAMPLE 1 Find first movie that includes 'Mrs' in its title:
 //   const movie = movies.find(movie => {
 //     return movie.includes('Mrs');
 //   });
+
+/* 1.1. My own example of finding a movie using an arrow function*/
+// const findMovie = movies.find(movie => movie.includes('Fan'));
+// console.log(findMovie);
+
+/*1.2. My example n.2, using a predefined function*/
+// const newMovie = movies.find(function(movie) {
+//   return movie.includes('Doubt');
+// });
+// console.log(newMovie);
+
+/*EXAMPLE 2.*/
+//Find first movie that begins with 'Mrs':
+// const movie2 = movies.find(m => m.indexOf("Mrs") === 0);
+
+/*2.1. My own example of finding a film*/
+// const newMovie = movies.find(movie => movie.indexOf('Fan') === 4);
+// console.log(newMovie);
+
+const books = [{
+  title: 'Good Omens',
+  authors: ['Terry Pratchett', 'Neil Gaiman'],
+  rating: 4.25
+},
+{
+  title: 'Bone: The Complete Edition',
+  authors: ['Jeff Smith'],
+  rating: 4.42
+},
+{
+  title: 'American Gods',
+  authors: ['Neil Gaiman'],
+  rating: 4.11
+},
+{
+  title: 'A Gentleman in Moscow',
+  authors: ['Amor Towles'],
+  rating: 4.36
+}
+];
+
+/*EXAMPLE 3.*/
+//Find first book w/ rating over 4.3
+// const goodBook = books.find(b => b.rating >= 4.3);
+// console.log(goodBook);
+
+/*Here's my example. I've decided to find a book with several authors*/
+// const findAuthors = books.find(book => 
+//   book.authors.length > 1);
+// console.log(findAuthors);
+
+/*EXAMPLE 4.*/
+//Find first book with Neil Gaiman as an author:
+// const neilBook = books.find(b => (
+//   b.authors.includes('Neil Gaiman')
+// ));
+
+/*My own example. Here, I've decided to find a book which title includes smth*/
+// const newBook = books.find(book => 
+//   book.title.includes('Gentleman'));
+// console.log(newBook);
 
