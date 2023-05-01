@@ -674,61 +674,61 @@
 // const allStartWithA = words.every(w => w[0] === 'A');
 // console.log(allStartWithA);
 
-const books = [{
-  title: 'Good Omens',
-  authors: ['Terry Pratchett', 'Neil Gaiman'],
-  rating: 4.25,
-  genres: ['fiction', 'fantasy']
-},
-{
-  title: 'Changing My Mind',
-  authors: ['Zadie Smith'],
-  rating: 3.83,
-  genres: ['nonfiction', 'essays']
-},
-{
-  title: 'Bone: The Complete Edition',
-  authors: ['Jeff Smith'],
-  rating: 4.42,
-  genres: ['fiction', 'graphic novel', 'fantasy']
-},
-{
-  title: 'American Gods',
-  authors: ['Neil Gaiman'],
-  rating: 4.11,
-  genres: ['fiction', 'fantasy']
-},
-{
-  title: 'A Gentleman in Moscow',
-  authors: ['Amor Towles'],
-  rating: 4.36,
-  genres: ['fiction', 'historical fiction']
-},
-{
-  title: 'The Name of the Wind',
-  authors: ['Patrick Rothfuss'],
-  rating: 4.54,
-  genres: ['fiction', 'fantasy']
-},
-{
-  title: 'The Overstory',
-  authors: ['Richard Powers'],
-  rating: 4.19,
-  genres: ['fiction', 'short stories']
-},
-{
-  title: 'The Way of Kings',
-  authors: ['Brandon Sanderson'],
-  rating: 4.65,
-  genres: ['fantasy', 'epic']
-},
-{
-  title: 'Lord of the flies',
-  authors: ['William Golding'],
-  rating: 3.67,
-  genres: ['fiction']
-}
-];
+// const books = [{
+//   title: 'Good Omens',
+//   authors: ['Terry Pratchett', 'Neil Gaiman'],
+//   rating: 4.25,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'Changing My Mind',
+//   authors: ['Zadie Smith'],
+//   rating: 3.83,
+//   genres: ['nonfiction', 'essays']
+// },
+// {
+//   title: 'Bone: The Complete Edition',
+//   authors: ['Jeff Smith'],
+//   rating: 4.42,
+//   genres: ['fiction', 'graphic novel', 'fantasy']
+// },
+// {
+//   title: 'American Gods',
+//   authors: ['Neil Gaiman'],
+//   rating: 4.11,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'A Gentleman in Moscow',
+//   authors: ['Amor Towles'],
+//   rating: 4.36,
+//   genres: ['fiction', 'historical fiction']
+// },
+// {
+//   title: 'The Name of the Wind',
+//   authors: ['Patrick Rothfuss'],
+//   rating: 4.54,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'The Overstory',
+//   authors: ['Richard Powers'],
+//   rating: 4.19,
+//   genres: ['fiction', 'short stories']
+// },
+// {
+//   title: 'The Way of Kings',
+//   authors: ['Brandon Sanderson'],
+//   rating: 4.65,
+//   genres: ['fantasy', 'epic']
+// },
+// {
+//   title: 'Lord of the flies',
+//   authors: ['William Golding'],
+//   rating: 3.67,
+//   genres: ['fiction']
+// }
+// ];
 
 /*EXAMPLE 5*/
 //Are all books rated 3.5 or higher?
@@ -749,3 +749,34 @@ const books = [{
 // const someHaveSeveralGenres = books.some(book => 
 //   book.genres.length > 1);
 // console.log(someHaveSeveralGenres);
+
+/*********************************09_10 REDUCE INTRO ************/
+
+/*EXAMPLE*/
+// const nums = [3, 4, 5, 6, 7];
+// // To multiply all values in nums:
+// const product = nums.reduce((total, currentVal) => {
+//   return total * currentVal;
+// });
+
+// // total    currentVal    returnVal
+// // 3             4           12
+// // 12            5           60
+// // 60            6           360
+// // 360           7           2520
+
+// //Final Return Value: 2520
+
+/*My own example. I've decided to sum up all elements of the array. Summation*/
+// const nums = [3, 4, 5, 6, 7];
+// const result = nums.reduce((acc, currentVal) => {
+//   return acc + currentVal;
+// });
+// console.log(result);
+
+/*My own example n.2. Subtraction*/
+// const nums = [3, 4, 5, 6, 7];
+// const result = nums.reduce((acc, number) => {
+//   return acc - number;
+// });
+// console.log(result);
