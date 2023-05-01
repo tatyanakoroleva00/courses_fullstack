@@ -780,3 +780,67 @@
 //   return acc - number;
 // });
 // console.log(result);
+
+/*************09_11 Reduce Part 2 ********/
+const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
+
+/*EXAMPLE 1*/
+// One approach to find max using reduce:
+// const maxGrade = grades.reduce((max, currVal) => {
+//   if (currVal > max) return currVal;
+//   return max;
+// });
+
+/*1.1.My own example. Returning a min grade*/
+// const minGrade = grades.reduce((min, current) => {
+//   return min < current ? min : current;
+// });
+// console.log(minGrade);
+
+
+/*EXAMPLE 2*/
+// A shorter version using Math.max:
+// const maxGrade = grades.reduce((max, currVal) => {
+//   return Math.max(max, currVal);
+// });
+
+/*2.1.My own example of the Math.max function)*/
+// let arr = [1, 2, 3, 4, 5, 6];
+// let maxValue = arr.reduce((value1, value2) => {
+//   return Math.max(value1, value2);
+// });
+// console.log(maxValue);
+
+/*EXAMPLE 3*/
+// Finding the min value using Math.min: 
+// const minGrade = grades.reduce((min, currVal) => (
+//   //using implicit return for variety's sake
+//   Math.min(min, currVal)
+// ));
+
+// max     currVal    return
+// 87        64         87
+// 87        96         96
+// 96        92         96
+/// etc.
+
+/*3.1.My own example of the Math.min function)*/
+// let numbers = [3, 5, 3, 1, 6, 2];
+// let minNum = numbers.reduce((value1, value2) => {
+//   return Math.min(value1, value2);
+// });
+// console.log(minNum);
+
+/*EXAMPLE 4*/
+// We can specify an initial value as the 2nd argument to reduce:
+// arr.reduce(reducerFunction, initialValue)
+// const total = [10, 20, 30, 40, 50].reduce((sum, currVal) => {
+//   return sum + currVal;
+// }, 1000) //sum starts at 1000, then each element is added to it
+
+/*4.1. My own example. Here, I've decided to make a subtraction of numbers. Initial number is 100. */
+// let numbers = [10, 20, 3, 4, 5, 6].reduce((result, currValue) => {
+//   return result - currValue; 
+// }, 100);
+
+// console.log(numbers);
