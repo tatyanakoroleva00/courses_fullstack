@@ -9,7 +9,7 @@
 // const numbers = [20, 21, 22, 23, 24, 25, 26, 27];
 // numbers.forEach(num => {
 //     console.log(num);
-// });
+// }); 
 
 /*1.2. I've decided to display all numbers in bold weight, each on its line, on the screen*/
 // const numbers = [20, 21, 22, 23, 24, 25, 26, 27];
@@ -631,3 +631,121 @@
 //   return title.includes('ow');
 // });
 // console.log(booksFound);
+
+/******************************09_08 SOME AND EVERY *********/
+// const words = ["dog", 'dig', 'log', 'bag', 'wag'];
+/*EXAMPLE 1*/
+//Is every word 3 characters long?
+// const all3Letters = words.every(word => word.length === 3);
+// console.log(all3Letters);
+
+/*1.1. My example. Here, I've decided to check whether each words starts with the letter 'd'.*/
+// const answer = words.every(word => word[0] === 'd');
+// console.log(answer);
+
+/*EXAMPLE 2*/
+// Do all words end in 'g'?
+// const allEndInG = words.every(word => {
+//   const last = word.length - 1;
+//   return word[last] === 'g'
+// });
+
+/*2.1. My own example. Here, I've decided to check whether all last letters are 'a(-s)'. And to write down an answer to the console.log.*/
+// const answer = words.every(word => {
+//   const lastIndex = word.length - 1;
+// return word[lastIndex] === 'a';
+// });
+// answer ? console.log('Great') : console.log('I am sorry!');
+
+/*EXAMPLE 3*/
+//Does at least 1 book start with 'd'?
+// const someStartWithD = words.some(word => word[0] === 'd');
+
+/*3.1. My own example. I want to get to know whether some elements of the array start with 'w'.*/
+// const someStartWithW = words.some(w => 
+//   w[0] === 'w');
+// console.log(someStartWithW);
+
+/*EXAMPLE 4*/
+// Do all words start with 'd'?
+// const allStartWithD = words.every(word => word[0] === 'd');
+
+/*4.1. My own example. Do all words start with the letter 'A'.*/
+// const allStartWithA = words.every(w => w[0] === 'A');
+// console.log(allStartWithA);
+
+const books = [{
+  title: 'Good Omens',
+  authors: ['Terry Pratchett', 'Neil Gaiman'],
+  rating: 4.25,
+  genres: ['fiction', 'fantasy']
+},
+{
+  title: 'Changing My Mind',
+  authors: ['Zadie Smith'],
+  rating: 3.83,
+  genres: ['nonfiction', 'essays']
+},
+{
+  title: 'Bone: The Complete Edition',
+  authors: ['Jeff Smith'],
+  rating: 4.42,
+  genres: ['fiction', 'graphic novel', 'fantasy']
+},
+{
+  title: 'American Gods',
+  authors: ['Neil Gaiman'],
+  rating: 4.11,
+  genres: ['fiction', 'fantasy']
+},
+{
+  title: 'A Gentleman in Moscow',
+  authors: ['Amor Towles'],
+  rating: 4.36,
+  genres: ['fiction', 'historical fiction']
+},
+{
+  title: 'The Name of the Wind',
+  authors: ['Patrick Rothfuss'],
+  rating: 4.54,
+  genres: ['fiction', 'fantasy']
+},
+{
+  title: 'The Overstory',
+  authors: ['Richard Powers'],
+  rating: 4.19,
+  genres: ['fiction', 'short stories']
+},
+{
+  title: 'The Way of Kings',
+  authors: ['Brandon Sanderson'],
+  rating: 4.65,
+  genres: ['fantasy', 'epic']
+},
+{
+  title: 'Lord of the flies',
+  authors: ['William Golding'],
+  rating: 3.67,
+  genres: ['fiction']
+}
+];
+
+/*EXAMPLE 5*/
+//Are all books rated 3.5 or higher?
+// const allGoodBooks = books.every(book => book.rating > 3.5);
+
+/*5.1. My own example. Here, I am interested, whether all books have several writers.*/
+// const allHaveSeveralAuthors = books.every(book => {
+//   const authors = book.authors.length;
+//   return authors > 1;
+// });
+// console.log(allHaveSeveralAuthors);
+
+/*EXAMPLE 6*/
+// //Do any books have 2 authors?
+// const any2Authors = books.some(book => book.authors.length === 2)
+
+/*6.1. Here, I've checked whether any books have several genres*/
+// const someHaveSeveralGenres = books.some(book => 
+//   book.genres.length > 1);
+// console.log(someHaveSeveralGenres);
