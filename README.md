@@ -5,3 +5,4 @@ Methods.
 3. Intro Arrow Functions
 4. Arrow Functions Implicit Returns
 5. Array find
+6. Array filter
