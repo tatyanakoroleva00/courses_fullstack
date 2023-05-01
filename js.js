@@ -461,27 +461,27 @@
 // const newMovie = movies.find(movie => movie.indexOf('Fan') === 4);
 // console.log(newMovie);
 
-const books = [{
-  title: 'Good Omens',
-  authors: ['Terry Pratchett', 'Neil Gaiman'],
-  rating: 4.25
-},
-{
-  title: 'Bone: The Complete Edition',
-  authors: ['Jeff Smith'],
-  rating: 4.42
-},
-{
-  title: 'American Gods',
-  authors: ['Neil Gaiman'],
-  rating: 4.11
-},
-{
-  title: 'A Gentleman in Moscow',
-  authors: ['Amor Towles'],
-  rating: 4.36
-}
-];
+// const books = [{
+//   title: 'Good Omens',
+//   authors: ['Terry Pratchett', 'Neil Gaiman'],
+//   rating: 4.25
+// },
+// {
+//   title: 'Bone: The Complete Edition',
+//   authors: ['Jeff Smith'],
+//   rating: 4.42
+// },
+// {
+//   title: 'American Gods',
+//   authors: ['Neil Gaiman'],
+//   rating: 4.11
+// },
+// {
+//   title: 'A Gentleman in Moscow',
+//   authors: ['Amor Towles'],
+//   rating: 4.36
+// }
+// ];
 
 /*EXAMPLE 3.*/
 //Find first book w/ rating over 4.3
@@ -504,3 +504,130 @@ const books = [{
 //   book.title.includes('Gentleman'));
 // console.log(newBook);
 
+
+/*********************09_07 Array Filter*****/
+
+
+// const nums = [34, 35, 67, 54, 109, 102, 32, 9];
+
+/*EXAMPLE 1.*/
+// const odds = nums.filter(n => n % 2 === 1);
+// const evens = nums.filter(n => n % 2 === 0);
+// const bigNums = nums.filter(n => n > 50);
+
+/*1.1.My own example, divisible by 3*/
+// const divisibleBy3 = nums.filter(n => n % 3 === 0);
+// console.log(divisibleBy3);
+
+/*1.2.My own example. I've decided to find the numbers which are bigger than 20 after the division. Then, to find their sum.*/
+
+// let sum = 0;
+// const numbers = nums.filter(n => n / 2 > 20);
+// for (let elem of numbers) {
+//   sum += elem;
+// }
+// console.log(sum);
+
+
+// const books = [{
+//   title: 'Good Omens',
+//   authors: ['Terry Pratchett', 'Neil Gaiman'],
+//   rating: 4.25,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'Changing My Mind',
+//   authors: ['Zadie Smith'],
+//   rating: 3.83,
+//   genres: ['nonfiction', 'essays']
+// },
+// {
+//   title: 'Bone: The Complete Edition',
+//   authors: ['Jeff Smith'],
+//   rating: 4.42,
+//   genres: ['fiction', 'graphic novel', 'fantasy']
+// },
+// {
+//   title: 'American Gods',
+//   authors: ['Neil Gaiman'],
+//   rating: 4.11,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'A Gentleman in Moscow',
+//   authors: ['Amor Towles'],
+//   rating: 4.36,
+//   genres: ['fiction', 'historical fiction']
+// },
+// {
+//   title: 'The Name of the Wind',
+//   authors: ['Patrick Rothfuss'],
+//   rating: 4.54,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'The Overstory',
+//   authors: ['Richard Powers'],
+//   rating: 4.19,
+//   genres: ['fiction', 'short stories']
+// },
+// {
+//   title: 'The Way of Kings',
+//   authors: ['Brandon Sanderson'],
+//   rating: 4.65,
+//   genres: ['fantasy', 'epic']
+// },
+// {
+//   title: 'Lord of the flies',
+//   authors: ['William Golding'],
+//   rating: 3.67,
+//   genres: ['fiction']
+// }
+// ];
+
+/*EXAMPLE 2*/
+//All books rated over 4.3:
+// const goodBooks = books.filter(b => b.rating > 4.3);
+
+/*2.1.My own example. Let's find books with low rating*/
+// const lowRatingBooks = books.filter(b =>
+//   b.rating < 4);
+// console.log(lowRatingBooks);
+
+/*EXAMPLE 3*/
+// All books with fantasy as a genre:
+// const fantasyBooks = books.filter(book => (
+//   book.genres.includes('fantasy')
+// ));
+
+/*3.1. My own example. Find books which include a specific genre*/
+// const fictionBooks = books.filter(book => 
+// book.genres.includes('fiction'));
+// console.log(fictionBooks);
+
+/*EXAMPLE 4*/
+// all books that are either short stories or essays:
+// const shortForm = books.filter(book => (
+//   book.genres.includes('short stories') || book.genres.includes('essays')
+// ));
+
+/*4.1. My own example. I've found books which may include 'epic' or 'fantasy' genres*/
+// const booksFound = books.filter(b => (
+//   b.genres.includes('epic') || b.genres.includes('fantasy'))
+// );
+// console.log(booksFound);
+
+/*EXAMPLE 5*/
+// Simple search functionality:
+// const query = 'The';
+// const results = books.filter(book => {
+//   const title = book.title.toLowerCase();
+//   return title.includes(query.toLowerCase());
+// });
+
+/*5.1. My own example. I've found books whose titles include 'ow'*/
+// const booksFound = books.filter(b => {
+//   const title = b.title.toLowerCase();
+//   return title.includes('ow');
+// });
+// console.log(booksFound);
