@@ -844,3 +844,168 @@ const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
 // }, 100);
 
 // console.log(numbers);
+
+/**********************09_12 REDUCE PART 3 *****/
+/*Отличное объяснение создания ключей и значений для новых элементов и увеличения значений
+https://medium.com/@stasonmars/как-работает-reduce-в-javascript-когда-его-нужно-применять-и-какие-крутые-вещи-можно-с-ним-b650c397bee6 */
+
+const votes = ['y', 'y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', 'n', 'n', 'y', 'y'];
+
+/*EXAMPLE 1*/
+// To tally the votes:
+// const results = votes.reduce((tally, val) => {
+//   if (tally[val]) {
+//     tally[val]++
+//   } else {
+//     tally[val] = 1;
+//   }
+//   return tally;
+// }, {});
+
+/*1.1. My own example of sorting elements*/
+// const fruits = ['banana', 'apple', 'apple', 'mango', 'banana'];
+
+// const result = fruits.reduce((total, fruit) => {
+//   if (total[fruit]) {
+//     total[fruit]++;
+//   } else {
+//     total[fruit] = 1;
+//   }
+//   return total;
+// }, {});
+// console.log(result);
+
+/*EXAMPLE 2*/
+// The shorter version:
+// const results = votes.reduce((tally, val) => {
+//   tally[val] = (tally[val] || 0) + 1;
+//   return tally;
+// }, {});
+
+/*My version of a short example*/
+// const fruits = ['banana', 'apple', 'apple', 'mango', 'banana'];
+// const result = fruits.reduce((total, fruit) => {
+//   total[fruit] = (total[fruit] || 0) + 1;
+//   return total;
+// }, {});
+// console.log(result);
+
+// const books = [{
+//   title: 'Good Omens',
+//   authors: ['Terry Pratchett', 'Neil Gaiman'],
+//   rating: 4.25,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'Changing My Mind',
+//   authors: ['Zadie Smith'],
+//   rating: 3.83,
+//   genres: ['nonfiction', 'essays']
+// },
+// {
+//   title: 'Bone: The Complete Edition',
+//   authors: ['Jeff Smith'],
+//   rating: 4.42,
+//   genres: ['fiction', 'graphic novel', 'fantasy']
+// },
+// {
+//   title: 'American Gods',
+//   authors: ['Neil Gaiman'],
+//   rating: 4.11,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'A Gentleman in Moscow',
+//   authors: ['Amor Towles'],
+//   rating: 4.36,
+//   genres: ['fiction', 'historical fiction']
+// },
+// {
+//   title: 'The Name of the Wind',
+//   authors: ['Patrick Rothfuss'],
+//   rating: 4.54,
+//   genres: ['fiction', 'fantasy']
+// },
+// {
+//   title: 'The Overstory',
+//   authors: ['Richard Powers'],
+//   rating: 4.19,
+//   genres: ['fiction', 'short stories']
+// },
+// {
+//   title: 'A Truly Horrible Book',
+//   authors: ['Xavier Time'],
+//   rating: 2.18,
+//   genres: ['fiction', 'garbage']
+// },
+// {
+//   title: 'The Way of Kings',
+//   authors: ['Brandon Sanderson'],
+//   rating: 4.65,
+//   genres: ['fantasy', 'epic']
+// },
+// {
+//   title: 'Lord of the flies',
+//   authors: ['William Golding'],
+//   rating: 3.67,
+//   genres: ['fiction']
+// }
+// ];
+
+/* EXAMPLE 3*/
+// To group books by rating: 
+// const groupedByRatings = books.reduce((groupedBooks, book) => {
+//   const key = Math.floor(book.rating);
+//   if (!groupedBooks[key]) groupedBooks[key] = [];
+//   groupedBooks[key].push(book);
+//   return groupedBooks;
+// }, {});
+// console.log(groupedByRatings);
+
+/* 
+1. Book - is an array. 
+Here, books is what we need to group. We make Book - a parameter of the method Reduce. 
+2. Step 2: Math.floor - we want to get rid of numbers after , to get whole numbers. We make this modif with all ratings. 
+3. Step 3: If this key (or rating), doesn't exist yet, we create an empty array to put this key(rating) inside. So that to sort ratings 2, 3, 4, 5. 
+4. Step 4: We push a book into this key. Example: 2: [book 1, book 2];
+5. We return all collection of books, sorted by rating. 
+6. The result will be: groupedByRatings = {2: [], 3: [], 4: []};
+
+*/
+
+/*My own example. I've decided to sort everyone by marks. Not an easy example. But worths understanding it!*/
+
+// const marks = [
+//   {
+//     name: 'Ivan', 
+//     mark : 3.25,
+//   },
+//   {
+//     name: 'Svetlana', 
+//     mark : 4.35,
+//   },
+//   {
+//     name: 'Denis', 
+//     mark : 2.17,
+//   },
+//   {
+//     name: 'Ivan', 
+//     mark : 1.78,
+//   },
+//   {
+//     name: 'Alex', 
+//     mark : 3.56,
+//   },
+// ];
+
+// const sortedByMarks = marks.reduce((sortedPupils, pupil) => {
+//   let markType = Math.floor(pupil.mark);
+//   if (!sortedPupils[markType]) { 
+//     sortedPupils[markType] = [];
+//   }
+//   sortedPupils[markType].push(pupil);
+//   return sortedPupils;
+// }, {});
+// console.log(sortedByMarks);
+
+
