@@ -782,7 +782,7 @@
 // console.log(result);
 
 /*************09_11 Reduce Part 2 ********/
-const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
+// const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
 
 /*EXAMPLE 1*/
 // One approach to find max using reduce:
@@ -849,7 +849,7 @@ const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
 /*Отличное объяснение создания ключей и значений для новых элементов и увеличения значений
 https://medium.com/@stasonmars/как-работает-reduce-в-javascript-когда-его-нужно-применять-и-какие-крутые-вещи-можно-с-ним-b650c397bee6 */
 
-const votes = ['y', 'y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', 'n', 'n', 'y', 'y'];
+// const votes = ['y', 'y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', 'n', 'n', 'y', 'y'];
 
 /*EXAMPLE 1*/
 // To tally the votes:
@@ -1008,4 +1008,125 @@ Here, books is what we need to group. We make Book - a parameter of the method R
 // }, {});
 // console.log(sortedByMarks);
 
+
+/************************09 Sort Method *****/
+// const prices = [400.50, 3000, 99.99, 35.99, 12.00, 9500];
+// REMEMBER THAT SORT() MUTATES THE ORIGINAL ARRAY!
+// I'm using slice() to create a new copy, otherwise we would be sorting the same array 3 times:
+
+// /*EXAMPLE 1*/
+// // Default string sort :( 
+// const badSort = prices.slice().sort();
+
+/*1.1.My own example*/
+// let marks = [4, 5, 4, 3, 2, 4, 5, 1, 2];
+// let sortedMarks = marks.slice().sort();
+// console.log(sortedMarks);
+
+// /*EXAMPLE 2*/
+// // Ascending Sort:
+// const ascSort = prices.slice().sort((a, b) => a - b);
+
+/*2.1.My own example*/
+// let marks = [4, 5, 4, 3, 2, 4, 5, 1, 2];
+// let sortedMarks = marks.slice().sort((a, b) => a - b);
+// console.log(sortedMarks);
+
+// /*EXAMPLE 3*/
+// // Descending Sort:
+// const descSort = prices.slice().sort((a, b) => b - a);
+
+/*3.1.My own example*/
+// let marks = [4, 5, 4, 3, 2, 4, 5, 1, 2];
+// let descMarks = marks.slice().sort((a, b) => b - a);
+// console.log(descMarks);
+
+// /*EXAMPLE 4*/
+// const books = [{
+//     title: 'Good Omens',
+//     authors: ['Terry Pratchett', 'Neil Gaiman'],
+//     rating: 4.25,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'Changing My Mind',
+//     authors: ['Zadie Smith'],
+//     rating: 3.83,
+//     genres: ['nonfiction', 'essays']
+//   },
+//   {
+//     title: 'Bone: The Complete Edition',
+//     authors: ['Jeff Smith'],
+//     rating: 4.42,
+//     genres: ['fiction', 'graphic novel', 'fantasy']
+//   },
+//   {
+//     title: 'American Gods',
+//     authors: ['Neil Gaiman'],
+//     rating: 4.11,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'A Gentleman in Moscow',
+//     authors: ['Amor Towles'],
+//     rating: 4.36,
+//     genres: ['fiction', 'historical fiction']
+//   },
+//   {
+//     title: 'The Name of the Wind',
+//     authors: ['Patrick Rothfuss'],
+//     rating: 4.54,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'The Overstory',
+//     authors: ['Richard Powers'],
+//     rating: 4.19,
+//     genres: ['fiction', 'short stories']
+//   },
+//   {
+//     title: 'The Way of Kings',
+//     authors: ['Brandon Sanderson'],
+//     rating: 4.65,
+//     genres: ['fantasy', 'epic']
+//   },
+//   {
+//     title: 'Lord of the flies',
+//     authors: ['William Golding'],
+//     rating: 3.67,
+//     genres: ['fiction']
+//   }
+// ];
+
+// // Sorting books by their rating:
+// books.sort((a, b) => b.rating - a.rating);
+
+/*4.1.My own example*/
+
+// const marks = [
+//     {
+//       name: 'Ivan', 
+//       mark : 3.25,
+//     },
+//     {
+//       name: 'Svetlana', 
+//       mark : 4.35,
+//     },
+//     {
+//       name: 'Denis', 
+//       mark : 2.17,
+//     },
+//     {
+//       name: 'Ivan', 
+//       mark : 1.78,
+//     },
+//     {
+//       name: 'Alex', 
+//       mark : 3.56,
+//     },
+//   ];
+
+// let sortedPupils = marks.sort((a, b) => b.mark - a.mark);
+// console.log(sortedPupils);
+  
 

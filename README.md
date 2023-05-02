@@ -10,3 +10,4 @@ Methods.
 9/10. Reduce. Intro.
 9/11. Reduce. Part 2.
 9/12. Reduce. Part 3.
+9. Method Sort();
