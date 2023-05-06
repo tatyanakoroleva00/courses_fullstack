@@ -897,3 +897,47 @@
 /*********8. Стилизация через атрибут style*****/
 
 // Задание 8.1. Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу.
+
+// let div = document.querySelector('div');
+// let btn = document.querySelector('.btn');
+
+// btn.onclick = () => {
+//     div.style.width = '300px';
+//     div.style.height = '40px';
+//     div.style.border = '1px dashed black';
+// };
+
+// Задание 8.2. Дан див с текстом и кнопка. По клику на кнопку установите диву размер шрифта в 20px, а также верхнюю границу и фон.
+
+// const div = document.querySelector('div');
+// const btn = document.querySelector('input');
+
+// btn.onclick = () => {
+//     div.style.fontSize = '20px';
+//     div.style.borderTop = '3px solid purple';
+//     div.style.backgroundColor = 'pink';
+// };
+
+
+// Задание 8.3. Дан список ul и кнопка. По клику на кнопку добавьте тегам li свойство float в значении left.
+
+// const btn = document.querySelector('input');
+// const li = document.querySelectorAll('li');
+
+
+// btn.onclick = () => {
+//     for (let i = 0; i < li.length; i++) {
+//         li[i].style.float = 'left';
+//     }
+// };
+
+/*******9. Создание, вставка,  удаление элементов****/
+
+// Задание 9.1. Дан ol:
+
+// <ol id="elem"></ol>
+
+// Вставьте ему в конец li с текстом 'пункт'.
+
+// let ol = document.querySelector('ol');
+// ol.insertAdjacentHTML('beforeend', '<li>пункт</li>');
