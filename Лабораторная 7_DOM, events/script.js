@@ -941,3 +941,59 @@
 
 // let ol = document.querySelector('ol');
 // ol.insertAdjacentHTML('beforeend', '<li>пункт</li>');
+
+// Задание 9.2. Дан ol и кнопка:
+
+/* <ol id="elem"></ol>
+<button id="button">click me</button> */
+
+// Сделайте так, чтобы по клику на кнопку в конец списка добавлялся li с текстом 'пункт'.
+
+// let ol = document.querySelector('ol');
+// let btn = document.querySelector('button');
+
+// btn.onclick = () => {
+//     ol.insertAdjacentHTML('beforeend', '<li>пункт</li>');
+// };
+
+
+// Задание 9.3. Дан следующий код:
+
+// <ul id="parent">
+// <li>1</li>
+// <li id="elem">2</li>
+// <li>3</li>
+// </ul>
+
+// <input type="submit" id="button">
+
+// Сделайте так, чтобы по нажатию на кнопку удалялся элемент #elem.
+
+// let ul = document.querySelector('ul');
+// let btn = document.querySelector('input');
+// let elem = document.querySelector('#elem');
+
+// btn.onclick = () => {
+//     ul.removeChild(elem);
+// };
+
+// Задание 9.4. Дан следующий код:
+
+// <ul id="parent">
+// <li>1</li>
+// <li>2</li>
+// <li>3</li>
+// </ul>
+
+// <input type="submit" id="button">
+
+// Сделайте так, чтобы по каждому клику на кнопку удалялся последний элемент из #parent.
+
+// let ul = document.querySelector('ul');
+// let btn = document.querySelector('input');
+
+// btn.onclick = () => {
+//     ul.removeChild(ul.lastElementChild);
+// };
+
+// DONE!!!!!
