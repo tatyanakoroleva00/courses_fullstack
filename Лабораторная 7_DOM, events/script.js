@@ -743,3 +743,78 @@
 
 /************Задание 5.3. */
 // Задание 5.3. Дан инпут, абзац и кнопка. По нажатию на кнопку запишите в абзац текст из инпута.
+
+// const btn = document.querySelector('#button');
+// const elem = document.querySelector('#elem');
+// const par = document.querySelector('#par');
+
+// btn.onclick = () => {
+//     par.innerHTML = elem.value;
+// };
+
+/************Задание 5.4. */
+// Задание 5.4. Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа.
+
+// const btn = document.querySelector('#button');
+// const elem = document.querySelector('#elem');
+// const elem2 = document.querySelector('#elem2');
+
+// btn.onclick = () => {
+//     elem2.value = Math.pow(elem.value, 2);
+// };
+
+/************Задание 5.5. */
+
+// Задание 5.5. Даны два инпута и кнопка. По нажатию на кнопку запишите в первый инпут значение второго инпута, а во второй инпут - значение первого.
+
+// const btn = document.querySelector('#button');
+// const elem = document.querySelector('#elem');
+// const elem2 = document.querySelector('#elem2');
+
+// const valueElem = elem.value;
+// const valueElem2 = elem2.value;
+
+// btn.onclick = () => {
+//     direct();
+// };
+
+// function direct() {
+//     elem.value = valueElem2;
+//     elem2.value = valueElem;
+//     btn.onclick = () => {
+//         reverse();
+//     };
+// };
+
+// function reverse() {
+//     elem.value = valueElem;
+//     elem2.value = valueElem2;
+//     btn.onclick = () => {
+//         direct();
+//     };
+// };
+
+/************Задание 5.6. */
+
+// Задание 5.6. Даны 5 инпутов, абзац и кнопка. В инпут вводятся числа. По нажатию на кнопку запишите среднее арифметическое введенных чисел в абзац.
+
+// const num1 = document.querySelector('#num1');
+// const num2 = document.querySelector('#num2');
+// const num3 = document.querySelector('#num3');
+// const num4 = document.querySelector('#num4');
+// const num5 = document.querySelector('#num5');
+
+
+// const btn = document.querySelector('#btn');
+// const par = document.querySelector('#par');
+
+// let numArr = [num1, num2, num3, num4, num5];
+
+// btn.onclick = () => {
+//     let result = numArr.reduce((sum, el)=> {
+//         el = el.value;
+//         return sum += +el;
+//     }, 0);
+//     let average = result / numArr.length;
+//     par.innerHTML = average;
+// }
