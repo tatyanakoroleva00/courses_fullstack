@@ -687,9 +687,9 @@
 // Задание 4.8. 
 // Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке.
 
-{/* <img src='https://images.unsplash.com/photo-1682771843314-111d312c4ecf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8TThqVmJMYlRSd3N8fGVufDB8fHx8&w=1000&q=80' width="300" alt="architecture">
+/* <img src='https://images.unsplash.com/photo-1682771843314-111d312c4ecf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8TThqVmJMYlRSd3N8fGVufDB8fHx8&w=1000&q=80' width="300" alt="architecture">
 
-<img src='https://images.unsplash.com/photo-1682444990270-045a8615fe47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfE04alZiTGJUUndzfHxlbnwwfHx8fA%3D%3D&w=1000&q=80width="300"'width='300' alt="architecture2"> */}
+<img src='https://images.unsplash.com/photo-1682444990270-045a8615fe47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfE04alZiTGJUUndzfHxlbnwwfHx8fA%3D%3D&w=1000&q=80width="300"'width='300' alt="architecture2"> */
 
 // const btn1 = document.querySelector('#btn-1');
 // const btn2 = document.querySelector('#btn-2');
@@ -818,3 +818,58 @@
 //     let average = result / numArr.length;
 //     par.innerHTML = average;
 // }
+
+/*******6. Работа с коллекцией элементов*****/
+// Задание 6.1. Даны абзацы и кнопка. По нажатию на кнопку найдите все абзацы, переберите их циклом и установите текст каждого абзаца в значение 'text'.
+
+// const par = document.querySelectorAll('p');
+// const btn = document.querySelector('#btn');
+
+// btn.onclick = () => {
+//     par.forEach((e) => {
+//         e.setAttribute('value', 'text');
+//         e.innerHTML = 'text';
+//     });
+// };
+
+/**************** Задание 6.2. ******/
+// Задание 6.2. Даны абзацы с текстом и кнопка. По нажатию на кнопку запишите в конец текста каждого абзаца его порядковый номер.
+
+// let par = document.querySelectorAll('p');
+// let btn = document.querySelector('#btn');
+// btn.onclick = () => {
+//     for (let i = 0; i <= par.length; i++) {
+//         let text = par[i].textContent;
+//         par[i].innerHTML = text + (i + 1);
+//     }
+// };
+
+/**************** Задание 6.3. ******/
+// Задание 6.3. Даны инпуты с числами, абзац и кнопка. По нажатию на кнопку найдите сумму чисел из инпутов и запишите эту сумму в текст абзаца.
+
+// let input = document.querySelectorAll('input');
+// let btn = document.querySelector('#btn');
+// let par = document.querySelector('#par');
+
+
+
+// btn.onclick = () => {
+//     let sum = 0;
+// for (let i = 0; i < input.length; i++) {
+//     sum += Number(input[i].value);
+// }
+// par.innerHTML = sum;
+// };
+
+/**************** 7. Работа с классам элементов ******/
+
+// Задание 7.1. Дан элемент:
+
+// <p id="elem" class="www ggg zzz"></p>
+
+// Узнайте количество его классов.
+// Переберите в цикле его классы.
+// Добавьте ему класс xxx.
+// Удалите у него класс www и класс zzz.
+// Проверьте наличие у него класса ggg.
+// Добавьте ему класс www, если его нет и удалите - если есть.
