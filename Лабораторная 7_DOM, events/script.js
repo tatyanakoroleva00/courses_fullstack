@@ -873,3 +873,27 @@
 // Удалите у него класс www и класс zzz.
 // Проверьте наличие у него класса ggg.
 // Добавьте ему класс www, если его нет и удалите - если есть.
+
+// let elem = document.querySelector('#elem');
+// console.log(elem.classList.length);
+// let elemArr = elem.classList;
+
+// elemArr.forEach((e) => {
+//     console.log(e);
+// });
+
+// elemArr.add('xxx');
+// console.log(elemArr);
+
+// elemArr.remove('www', 'zzz');
+// console.log(elemArr);
+
+// console.log(elemArr.contains('ggg'));
+
+// elemArr.contains('www') ? elemArr.remove('www') : elemArr.add('www');
+// console.log(elemArr);
+
+
+/*********8. Стилизация через атрибут style*****/
+
+// Задание 8.1. Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу.
