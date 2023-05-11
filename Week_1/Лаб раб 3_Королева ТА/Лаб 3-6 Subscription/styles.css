@@ -1,0 +1,125 @@
+*, :before, :after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    /* Primary */
+    --cyan: hsl(179, 62%, 43%);
+    --light-blue: hsl(179, 90%, 38%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    /* Neutral */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    height: 100vh;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    background-color: var(--light-gray);
+    color: white;
+}
+.container {
+    width: 144rem;
+    height: 100vh;
+    background-color: var(-light-gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    border-radius: 10px;
+    width: 65rem;
+}
+.top {
+    background-color: white;
+    padding: 4rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.top h1 {
+    font-size: 2.3rem;
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+.top h2 {
+    color: var(--bright-yellow);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.top p {
+    color: var(--grayish-blue);
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2px;
+}
+.bottom {
+    display: flex;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.left-col {
+    background-color: var(--cyan);
+    flex: 1;
+    padding: 4rem;
+}
+.left-col .title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 0.4px;
+}
+.left-col .number {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-right: 1rem;
+    color: white;
+}
+.left-col .addition {
+    font-size: 1.6rem;
+    color: var(--light-gray);
+    margin-bottom: 1.5rem;
+}
+.left-col .full-access {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+button {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    background-color: var(--bright-yellow);
+    font-size: 1.6rem;
+    border: 2px solid var(--cyan);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.right-col {
+    flex: 1;
+    padding: 4rem;
+    background-color: var(--light-blue);
+    
+}
+.right-col p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+.right-col ul {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--light-gray);
+}

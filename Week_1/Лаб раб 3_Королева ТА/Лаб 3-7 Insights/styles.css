@@ -1,0 +1,107 @@
+*,
+:before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white1: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    /* font-family: 'Lexend Deca', sans-serif; */
+}
+
+.container {
+    height: 100vh;
+    max-width: 144rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    background-color: var(--dark-desaturated-blue);
+}
+
+.card .col-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 8rem 8rem 8rem;
+    width: 60rem;
+}
+.card .col-1 h1 {
+    margin-bottom: 3rem;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.card .col-1 span {
+    color: var(--soft-violet);
+}
+.card .info {
+    font-size: 1.8rem;
+    color: var(--slightly-transparent-white1);
+    line-height: 3rem;
+}
+
+.statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    margin-top: 6rem;
+    width: 90%;
+}
+.statistics_col {
+    display: flex;
+    flex-direction: column;
+}
+.statistics .number {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+.statistics .title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--slightly-transparent-white);
+}
+
+
+.card_col-2 {
+    width: 60rem;
+    position: relative;
+    background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    position: center;
+    position: relative;
+    display: flex;
+}
+.card_col-2::before {
+    content: '';
+    position: absolute;
+    background-color: var(--soft-violet);
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}

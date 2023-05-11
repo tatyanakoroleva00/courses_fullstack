@@ -1,0 +1,142 @@
+*,
+:before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /*Primary*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /*Neutral*/
+    /*(main BG)*/
+    --very-dark-blue: hsl(217, 54%, 11%);
+    /* (card BG)*/
+    --very-dark-blue2: hsl(216, 50%, 16%);
+    /*line*/
+    --very-dark-blue3: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue);
+}
+.container {
+    max-width: 144rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    width: 30rem;
+    border-radius: 10px;
+    background-color: var(--very-dark-blue2);
+    padding: 2rem;
+}
+.image-box {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.image-box img {
+    width: 100%;
+    z-index: 1;
+}
+.image-box .view {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    z-index: 5;
+    left: 41%;
+    top: 45%;
+    opacity: 0;
+}
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+.text {
+    font-size: 1.4rem;
+    color: var(--soft-blue);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 2.2rem;
+    opacity: 0.5;
+}
+.description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.col {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+.value {
+    color: var(--cyan);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+.days {
+    color: var(--soft-blue);
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+    opacity: 0.5;
+}
+hr {
+    background-color: var(--very-dark-blue3);
+    height: 0.5px;
+    opacity: 0.1;
+    margin-bottom: 1.5rem;
+}
+.signature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.signature img {
+    width: 2rem;
+    border: 0.09rem solid white;
+    border-radius: 50%;
+}
+.creation {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    color: var(--soft-blue);
+
+}
+.white-name {
+   color: var(--white);
+}
+
+/*hover parameters*/
+.image-box:hover {
+    background-color: var(--cyan);
+    opacity: 1;
+    cursor: pointer;
+}
+h1:hover, .white-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+    transition: .5s ease;
+}
+.image-box:hover img{
+    opacity: 0.5;
+    transition: .5s ease;
+}
+
+.image-box:hover .view {
+    opacity: 1;
+    transition: .5s ease;
+    
+}

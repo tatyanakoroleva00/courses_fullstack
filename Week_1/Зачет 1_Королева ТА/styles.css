@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aharoni');
+*,
+:before,
+:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 16px - 100%  */
+    /* 10px - 62.5% */
+    /*  1rem = 16px  */
+    /*  1rem = 10px  */
+    font-size: 62.5%;
+    color: #E8E8E8;
+    font-family: 'Aharoni', sans-serif; /*700*/
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(34, 27, 54);
+    background-image: url(images/fon.png);
+    background-repeat: no-repeat;
+    background-position: bottom -2rem left -1rem;
+    max-width: 142rem;
+}
+header {
+    max-width: 142rem;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem;
+    font-family: 'Alata', sans-serif;
+}
+
+header .logo {
+    font-size: 2.7rem;
+    line-height: 3.7rem;
+}
+
+header nav {
+    display: flex;
+    gap: 3.2rem;
+    padding: 1rem 3.6rem;
+}
+
+header nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #E8E8E8;
+    transition: all 0.5s;
+}
+
+header nav a:hover {
+    border-radius: 2.6rem;
+    background-color: #402166;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/*************************************MAIN***********************************************/
+.main {
+    margin-top: 1rem;
+    max-width: 142rem;
+    display: grid;
+    justify-content: end;
+}
+
+.index-main {
+    padding: 2rem 11.6rem;
+
+    grid-template-columns: 48rem;
+}
+
+.index-main .title .top {
+    color: #5D3974;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.index-main .title .bottom {
+    color: #575757;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.index-main .title .bottom,
+.index-main .title .top {
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.index-main h1, main h2 {
+    color: #E8E8E8;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.index-main .title {
+    margin-bottom: 3rem;
+}
+.index-main .info{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #C0C0C0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+/**********************************************************************************************************************************************************************************PAGE 2 **********************************************************************/
+.resume-main {
+    grid-template-columns: 50rem;
+    padding-right: 16rem;
+    padding-top: 3rem;
+}
+.resume-block {
+    display: grid;
+    padding: 1rem;
+    background-color: transparent;
+}
+.row {
+    display: flex;
+    height: 23.2rem;
+    padding: 1rem;
+    flex-direction: row;
+    gap: 1rem;
+    
+}
+.left-block, .line-block, .right-block {
+    display: flex;
+    flex-direction: column;
+}
+.left-block {
+    width: 12.4rem;
+}
+
+.left-block .date-line, 
+.left-block .company {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: right;
+}
+.left-block .date-line {
+    color: #5D3974;
+    margin-bottom: 2rem;
+}
+.left-block .date {
+    font-size: 1rem;
+}
+.left-block .company {
+    color:  #575757;
+}
+.block-line {
+    content: '';
+    border: 0.5px solid #A60AC7;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px #A60AC7;
+}
+.right-block {
+    width: 33.4rem;
+    padding: 1rem;
+    color: #E8E8E8;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.right-block h1 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+.right-block ul {
+    font-size: 1rem;
+    line-height: 1.58rem;
+}
+.right-block ul li {
+    margin-left: 1rem;
+}
+.nested-list {
+    list-style: disc;
+}
+
+
+/********************************************
+**********GALLERY*********************************
+*****************************************/
+
+.gallery-main {
+    /* padding-top: 2rem; */ /*Я убрала сверху, чтобы больше соостветствовала картинка макету, иначе картинки едут вниз*/
+    padding-right: 15rem;
+}
+.gallery-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+.gallery-image {
+    border-radius: 1rem;
+    width: 22.25rem;
+    height: 21.33rem; /*Уменьшила размер картинок, на макете стоит большой размер, картинки уходят вниз*/
+}
+
+/********************************************
+**********CERTIFICATES*********************************
+*****************************************/
+.certificates-main {
+    padding-top: 2rem;
+    padding-right: 16.5rem;
+}
+.certificates-block {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.certificates-cell {
+    display: flex;
+    align-items: center;
+}
+.certificate {
+    padding: 1px;
+    width: 21rem;
+    height: 22.35rem;
+}
