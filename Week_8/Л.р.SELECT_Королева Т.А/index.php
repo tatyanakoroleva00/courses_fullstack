@@ -374,11 +374,39 @@ $pdo = DBConnect::getConnection();
 //а также названия клиентов, которые их оформили и имя,
 //должность сотрудников, которые эти заказы сопровождали и описание, и цену продукции
 
-$query = "SELECT order_num, order_date, qty, amount, 
+//$query = "SELECT order_num, order_date, qty, amount, company, name, title
+//       FROM orders, customers, salesreps
+//        WHERE cust = cust_num AND cust_rep = empl_num;";
+//
+//$result = $pdo->query($query)->fetchAll();
+//DBConnect::d($result);
 
-       
-       
-       FROM orders, ;";
+
+//---------------7. Получить номер, дату, кол-во, стоимость заказов, а также названия клиентов,
+// которые их оформили и имя, должность сотрудников, которые
+// эти заказы сопровождали,
+// а также город и регион офисов, в которых
+// эти сотрудники работают и описание, и цену продукции
+
+//$query = "SELECT order_num, order_date, qty, amount, company, name, title,
+//       city, region, description, (price * qty_on_hand) as production_price
+//       FROM orders, customers, salesreps, offices, products
+//    WHERE cust = cust_num AND cust_rep = empl_num AND empl_num = mgr AND  mfr = mfr_id;";
+//
+//$result = $pdo->query($query)->fetchAll();
+//DBConnect::d($result);
+
+//---------------8. Получить номер, имя, возраст, продажи сотрудника, а
+// также город, регион, продажи офиса, в котором сотрудники работают
+
+
+//$query = "SELECT empl_num, name, age, city, region
+//FROM salesreps, offices
+//WHERE empl_num = mgr;";
+//
+//$result = $pdo ->query($query)->fetchAll();
+//DBConnect::d($result);
+
 
 
 
